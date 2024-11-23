@@ -1,7 +1,10 @@
 import React, { useState, useRef } from "react";
-import { SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Thumbs } from "swiper/core";
-import "swiper/swiper.scss";
+import { Swiper, SwiperSlide } from "swiper/react"; // Обновленный импорт
+import SwiperCore, { Navigation, Thumbs } from "swiper"; // Обновленный импорт
+import 'swiper/swiper.scss';
+import 'swiper/modules/navigation/navigation.scss'; // Импорт стилей для навигации
+import 'swiper/modules/thumbs/thumbs.scss'; // Импорт стилей для Thumbs
+
 import { ReactComponent as LeftArrow } from "/src/assets/left-arrow.svg";
 
 import {
@@ -32,8 +35,16 @@ function Gallery({
           setActiveSlide(slider.realIndex);
         }}
         spaceBetween={20}
-        thumbs={{ swiper: thumbsSwiper }}
+        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }} // Проверка на null
         loop
+        navigation={{
+          prevEl: navigationPrevRef.current,
+          nextEl: navigationNextRef.current
+        }}
+        onBeforeInit={(swiper) => {
+          swiper.params.navigation.prevEl = navigationPrevRef.current;
+          swiper.params.navigation.nextEl = navigationNextRef.current;
+        }}
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
@@ -48,9 +59,7 @@ function Gallery({
       </StyledSwiper>
       <SliderWrapper>
         <StyledSwiperMini
-          onSwiper={(e) => {
-            setThumbsSwiper(e);
-          }}
+          onSwiper={setThumbsSwiper}
           spaceBetween={20}
           slidesPerView={4}
           freeMode
@@ -59,10 +68,6 @@ function Gallery({
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current
-          }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = navigationPrevRef.current;
-            swiper.params.navigation.nextEl = navigationNextRef.current;
           }}
         >
           {slides.map((slide, index) => (

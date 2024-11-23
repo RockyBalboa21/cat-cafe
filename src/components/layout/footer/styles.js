@@ -2,11 +2,7 @@ import styled from "styled-components";
 import { Section } from "/src/components/styled";
 
 export const StyledSection = styled(Section)`
-  position: absolute;
   width: ${(props) => props.theme.pageWidth};
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   padding-top: 0;
   padding-bottom: 0;
