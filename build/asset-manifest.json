@@ -5,11 +5,11 @@
     "runtime-main.js": "/static/js/runtime-main.a100cf95.js",
     "runtime-main.js.map": "/static/js/runtime-main.a100cf95.js.map",
     "static/css/2.d911501a.chunk.css": "/static/css/2.d911501a.chunk.css",
-    "static/js/2.f6e9f0d6.chunk.js": "/static/js/2.f6e9f0d6.chunk.js",
-    "static/js/2.f6e9f0d6.chunk.js.map": "/static/js/2.f6e9f0d6.chunk.js.map",
+    "static/js/2.52bc031b.chunk.js": "/static/js/2.52bc031b.chunk.js",
+    "static/js/2.52bc031b.chunk.js.map": "/static/js/2.52bc031b.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d911501a.chunk.css.map": "/static/css/2.d911501a.chunk.css.map",
-    "static/js/2.f6e9f0d6.chunk.js.LICENSE.txt": "/static/js/2.f6e9f0d6.chunk.js.LICENSE.txt",
+    "static/js/2.52bc031b.chunk.js.LICENSE.txt": "/static/js/2.52bc031b.chunk.js.LICENSE.txt",
     "static/media/about.087a9337.svg": "/static/media/about.087a9337.svg",
     "static/media/buy-background.df481f36.svg": "/static/media/buy-background.df481f36.svg",
     "static/media/buy-right-background-top.01ea9c10.svg": "/static/media/buy-right-background-top.01ea9c10.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.a100cf95.js",
     "static/css/2.d911501a.chunk.css",
-    "static/js/2.f6e9f0d6.chunk.js",
+    "static/js/2.52bc031b.chunk.js",
     "static/js/main.8a352384.chunk.js"
   ]
 }
